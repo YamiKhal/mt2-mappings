@@ -1,0 +1,6 @@
+class mmoCostume
+    method GetCostumePartName(int) const
+        returns std::string const&
+        param 1 part
+        doc The part's bone name (mmoCostumePartDescriptor boneName), as a reference into the costume.
+        seen mmoCostume::GetCostumePartName(int) const+0xd

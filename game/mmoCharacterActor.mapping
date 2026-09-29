@@ -1,0 +1,3 @@
+class mmoCharacterActor
+    size 0xe0
+    seen mmoCharacterModelManager::MakeActor_Internal(mmoCharacterType*, vsVector3D const&, bool, bool, vsScene*)+0x58

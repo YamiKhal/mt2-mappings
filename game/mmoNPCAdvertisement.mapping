@@ -1,0 +1,10 @@
+class mmoNPCAdvertisement
+    doc An advertisement about an NPC, built on mmoAdvertisement: a player's "Get quest" is one.
+    doc Its constructor is inlined: the game runs mmoAdvertisement's, then sets this class's vtable and the npc field.
+    size 0x140
+    seen mmoToon::GetSelfAdvertisements()+0x185
+    seen mmoToon::GetSelfAdvertisements()+0x19a
+    field 0x128 npc vsWeakPointer<mmoNPC>
+        doc The NPC it's about (the quest giver for "Get quest"). A weak pointer: its vtable at +0x0, the NPC at +0x8, a proxy at +0x10.
+        seen mmoToon::GetSelfAdvertisements()+0x1d0
+        seen mmoToon::GetSelfAdvertisements()+0x221

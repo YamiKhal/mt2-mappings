@@ -1,0 +1,6 @@
+class mmoNPC
+    field 0x810 marker vsModelInstance*
+        doc The marker model over a quest giver's head. Null when it has none.
+        seen mmoNPC::_PlaceMarker()+0x0
+    method _PlaceMarker()
+        doc Places the quest marker over the NPC and colors it (vsModelInstance::SetMatrix). The work is in its [clone .part.0].

@@ -1,0 +1,4 @@
+class mmoModeTitle
+    method SetTitle(std::string const&)
+        doc Empty in this build (just ret): changing it does nothing.
+        seen mmoModeTitle::SetTitle(std::string const&)+0x0

@@ -1,0 +1,8 @@
+class vsWeakObjectLink<T>
+    doc A link to a T that can go away, as saved fields keep it (a quest's giver): an id to find the T by when loading, then a vsWeakPointer to it.
+    doc Check proxy and *proxy before using object, as the game does (vsWeakObjectLink<mmoNPC>::Resolve, every mmoQuestInstance method).
+    size 0x38
+    field 0x0 vtable void*
+    field 0x18 linkId int
+        doc The id the T is found by when a saved game loads.
+    field 0x20 pointer vsWeakPointer<T>

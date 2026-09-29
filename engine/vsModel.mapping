@@ -1,0 +1,9 @@
+class vsModel
+    field 0xa8 lods void**
+        doc Its levels of detail, one pointer each. A level keeps its fragments (vsFragment**) at +0x8 and their count (int) at +0x10.
+        seen vsModel::GetLodFragmentCount(int) const+0x113
+        seen vsModel::GetLodFragmentCount(int) const+0x121
+        seen vsModel::AddLodFragment(int, vsFragment*) [clone .part.0]+0x13f
+        seen vsModel::AddLodFragment(int, vsFragment*) [clone .part.0]+0x14b
+    field 0xb0 lodCount int
+        seen vsModel::GetLodFragmentCount(int) const+0x18

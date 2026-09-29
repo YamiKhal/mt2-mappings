@@ -1,0 +1,6 @@
+class vsVector3D
+    doc From the engine's public source (VS/Math/VS_Vector.h). The game is Y-up.
+    size 0xc
+    field 0x0 x float
+    field 0x4 y float
+    field 0x8 z float

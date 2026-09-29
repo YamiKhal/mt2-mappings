@@ -1,0 +1,7 @@
+class vsMatrix4x4
+    doc From the engine's public source (VS/Math/VS_Matrix.h): four rows.
+    size 0x40
+    field 0x0 x vsVector4D
+    field 0x10 y vsVector4D
+    field 0x20 z vsVector4D
+    field 0x30 w vsVector4D

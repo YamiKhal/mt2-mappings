@@ -1,0 +1,7 @@
+class vsColor
+    doc From the engine's public source (VS/Graphics/VS_Color.h). Each part from 0 to 1.
+    size 0x10
+    field 0x0 r float
+    field 0x4 g float
+    field 0x8 b float
+    field 0xc a float

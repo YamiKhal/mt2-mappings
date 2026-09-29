@@ -1,0 +1,8 @@
+class vsArray<T>
+    doc The engine's growable list (VS_Array.h in the engine's public source).
+    field 0x8 items T*
+    field 0x10 count int
+        seen vsArray<vsModelInstance*>::AddItem(vsModelInstance* const&)+0x8
+    field 0x14 capacity int
+        doc How many items fit before AddItem makes a buffer twice as big (at least 4).
+        seen vsArray<vsModelInstance*>::AddItem(vsModelInstance* const&)+0xf

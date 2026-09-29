@@ -1,0 +1,16 @@
+class mmoAdvertisement
+    doc Something a player can choose to do, and what it promises them (utility AI).
+    doc Advertisements about an NPC, like a player's "Get quest", are mmoNPCAdvertisement, built on this one.
+    field 0x48 action int
+        doc The kind of action. mmoToon::GetSelfAdvertisements sets 7 for its "Get quest" mmoNPCAdvertisement.
+        unsure Read from how GetSelfAdvertisements fills a new advertisement.
+        seen mmoToon::GetSelfAdvertisements()+0x1e9
+    field 0x70 position vsVector3D
+        doc Where the player has to go for it.
+        seen mmoToonPlanTask::_EstimateTravelTimeTo(mmoAdvertisement const&) const+0xc8
+    field 0x108 advanceNeed float
+        unsure Named for what Quests Expanded uses it for: how much it serves the player's need to advance.
+        seen mmoToon::GetSelfAdvertisements()+0x1f0
+    field 0x110 lootNeed float
+        unsure Named for what Quests Expanded uses it for: how much it serves the player's need for loot.
+        seen mmoToon::GetSelfAdvertisements()+0x1f8

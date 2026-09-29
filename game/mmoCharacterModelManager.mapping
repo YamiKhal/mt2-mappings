@@ -1,0 +1,7 @@
+class mmoCharacterModelManager
+    method MakeActor_Internal(mmoCharacterType*, vsVector3D const&, bool, bool, vsScene*)
+        returns mmoCharacterActor*
+        param 1 type
+        param 2 position
+        doc Makes the model for a character type: an mmoActor for the costume's rig (mmoCostume actorName), wrapped in an mmoCharacterActor, dressed with mmoCostume::ApplyToActor.
+        seen mmoCharacterModelManager::MakeActor_Internal(mmoCharacterType*, vsVector3D const&, bool, bool, vsScene*)+0x138

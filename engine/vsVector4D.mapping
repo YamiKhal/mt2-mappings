@@ -1,0 +1,7 @@
+class vsVector4D
+    doc From the engine's public source (VS/Math/VS_Vector.h).
+    size 0x10
+    field 0x0 x float
+    field 0x4 y float
+    field 0x8 z float
+    field 0xc w float

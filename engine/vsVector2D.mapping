@@ -1,0 +1,5 @@
+class vsVector2D
+    doc From the engine's public source (VS/Math/VS_Vector.h).
+    size 0x8
+    field 0x0 x float
+    field 0x4 y float

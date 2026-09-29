@@ -1,0 +1,11 @@
+class vsBox3D
+    doc An axis-aligned box (VS_Box.h in the engine's public source). Empty until the first point is added.
+    size 0x1c
+    field 0x0 set bool
+        doc Whether the box holds anything yet: the first ExpandToInclude sets min and max to the point.
+        seen vsBox3D::ExpandToInclude(vsVector3D const&)+0x0
+        seen vsBox3D::ExpandToInclude(vsVector3D const&)+0x19
+    field 0x4 min vsVector3D
+        seen vsBox3D::ExpandToInclude(vsVector3D const&)+0x25
+    field 0x10 max vsVector3D
+        seen vsBox3D::ExpandToInclude(vsVector3D const&)+0x51

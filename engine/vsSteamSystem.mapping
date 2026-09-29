@@ -1,0 +1,12 @@
+class vsSteamSystem
+    doc The engine's link to Steam.
+    field 0x98 appId int
+        doc The game's Steam app id (486860), as the constructor was given it.
+        seen vsSteamSystem::vsSteamSystem(int)+0x4f
+    method vsSteamSystem(int)
+        param 1 appId
+        doc Asks Steam whether the game was started through it (SteamAPI_RestartAppIfNecessary with the app id). When it wasn't, Steam starts it again and this copy quits: "[STEAM] Steam is restarting us.".
+        doc So a debugger that starts MT2.exe itself loses the game, unless steam_appid.txt (with 486860) is next to MT2.exe. Attaching to the running game always works.
+        seen vsSteamSystem::vsSteamSystem(int)+0x1e
+        seen vsSteamSystem::vsSteamSystem(int)+0x1ce
+        seen vsSteamSystem::vsSteamSystem(int)+0x1e2

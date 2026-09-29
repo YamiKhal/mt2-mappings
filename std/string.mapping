@@ -1,0 +1,12 @@
+class std::string
+    doc The game's std::string is GCC's (libstdc++, new ABI): 32 bytes.
+    size 0x20
+    field 0x0 text char*
+        doc The characters, NUL-terminated. Points at buffer (+0x10) when the text is 15 characters or fewer.
+        seen vsSystem::GetTimeAsString()+0x46
+    field 0x8 length unsigned long long
+        doc The number of characters, not counting the NUL.
+        seen vsSystem::GetTimeAsString()+0x76
+    field 0x10 buffer char[16]
+        doc Room for a text of up to 15 characters. For a longer text, its first 8 bytes hold the capacity instead.
+        seen vsSystem::GetTimeAsString()+0x73

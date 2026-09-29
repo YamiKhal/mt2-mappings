@@ -1,0 +1,4 @@
+class mmoObject
+    field 0x18 uid unsigned long long
+        doc The object's id.
+        seen mmoObject::SetUID(unsigned long long)+0xe

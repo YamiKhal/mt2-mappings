@@ -1,0 +1,3 @@
+class mmoQuestAdvertisement
+    field 0x128 quest mmoQuest*
+        seen mmoQuestAdvertisement::BuildPlan(vsArrayStore<mmoAction>*)+0x5b

@@ -1,0 +1,5 @@
+class mmoCharacterType
+    field 0x18 colors int
+        doc Passed to mmoCostume::ApplyToActor when the type's characters are given their models.
+        unsure What the number stands for (a color set, an index) isn't known.
+        seen mmoCharacterModelManager::MakeActor_Internal(mmoCharacterType*, vsVector3D const&, bool, bool, vsScene*)+0xf6

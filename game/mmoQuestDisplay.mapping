@@ -1,0 +1,5 @@
+class mmoQuestDisplay
+    doc The map's display of a quest and its target.
+    field 0x1a8 quest ?
+        unsure Its type: the code takes its address, so it's kept inside, likely a weak pointer.
+        seen mmoQuestDisplay::SetNewDestination(mmoQuestDestination*)+0x32

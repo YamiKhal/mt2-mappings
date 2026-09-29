@@ -1,0 +1,5 @@
+class mmoWindow
+    method OnShow()
+        doc Called when a window is shown. Virtual: slot 22 (+0xb0) in each window's vtable.
+        inlined mmoWindow::Show(bool, bool) [clone .part.0]+0x12e
+        doc Show compares the window's OnShow to this one and runs its code inline when they match, so a hook here misses plain windows.

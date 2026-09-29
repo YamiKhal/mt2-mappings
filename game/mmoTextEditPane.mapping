@@ -1,0 +1,5 @@
+class mmoTextEditPane
+    method GetText() const
+        returns std::string const&
+        doc A reference to the text in the pane (+0x2d0), not a copy.
+        seen mmoTextEditPane::GetText() const+0x0

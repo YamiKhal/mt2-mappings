@@ -1,0 +1,4 @@
+class mmoSlider
+    field 0x4d0 step int
+        doc The slider's value as a step count; _ConvertToExternal turns it into the number shown.
+        seen mmoSlider::SetValue_Immediate(float)+0x79

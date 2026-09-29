@@ -1,0 +1,5 @@
+class mmoColorPicker
+    method GetColor()
+        returns vsColor const&
+        doc A reference into the picker, not a copy. Declared as returning a vsColor by value, a call passes a hidden result pointer that the game takes for the picker.
+        seen mmoColorPicker::GetColor()+0x28

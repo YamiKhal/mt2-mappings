@@ -1,0 +1,4 @@
+class mmoToonPlanTask
+    field 0x10 toon mmoToon*
+        doc The player whose plan this is.
+        seen mmoToonPlanTask::_EstimateTravelTimeTo(mmoAdvertisement const&) const+0x10

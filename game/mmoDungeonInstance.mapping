@@ -1,0 +1,4 @@
+class mmoDungeonInstance
+    doc One run of a dungeon.
+    field 0x30 dungeon mmoDungeon*
+        seen mmoDungeonInstance::NotifyCompletion()+0x35

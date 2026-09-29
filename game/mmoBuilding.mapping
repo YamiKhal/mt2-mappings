@@ -1,0 +1,4 @@
+class mmoBuilding
+    field 0xa38 dungeon mmoDungeon*
+        doc For a dungeon entrance: its dungeon.
+        seen mmoBuilding::SetDungeon(mmoDungeon*)+0x66

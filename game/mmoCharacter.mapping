@@ -1,0 +1,35 @@
+class mmoCharacter
+    doc Every person in the world: players' characters (mmoToon) and NPCs (mmoNPC, mmoMonster) are built on it.
+    field 0x170 shard mmoShard*
+        doc The world the character is in.
+        seen mmoCharacter::EquipWeaponModel(bool)+0x25c
+        seen mmoNPC::Generate(mmoCharacterTypeID const&, bool)+0x1dd
+    field 0x498 characterType mmoCharacterType*
+        doc Its character type. The costume comes from mmoCharacterType::GetCostume().
+        seen mmoCharacter::EquipWeaponModel(bool)+0x1e
+    field 0x4b0 weaponIlvl int
+        doc The weapon's item level. No weapon when 0 or less.
+        seen mmoCharacter::SetWeaponIlvl(int)+0x9
+        seen mmoCharacter::EquipWeaponModel(bool)+0x3b
+    field 0x4b8 weaponCategory std::string
+        doc The weapon's category: guns, bows, crossbows, rayguns, and so on.
+        seen mmoCharacter::EquipWeaponModel(bool)+0xc0
+    field 0x4d8 weaponVariantId int
+        doc The weapon model picked for the category and item level (mmoWeaponModelManager::PickWeaponVariantId).
+        seen mmoCharacter::SetWeaponIlvl(int)+0xf9
+        seen mmoCharacter::EquipWeaponModel(bool)+0x22a
+    field 0x4dc weaponModelState int
+        unsure What its values mean isn't known: EquipWeaponModel sets it to 13 when it starts, and later to 6 or 5.
+        seen mmoCharacter::EquipWeaponModel(bool)+0x41
+        seen mmoCharacter::EquipWeaponModel(bool)+0x32d
+        seen mmoCharacter::EquipWeaponModel(bool)+0x340
+    field 0x6f0 actor mmoCharacterActor*
+        doc The character's model in the world. Null until the character is shown.
+        seen mmoCharacter::EquipWeaponModel(bool)+0x63
+    method EquipWeaponModel(bool)
+        doc Builds the weapon model in the character's hand from weaponCategory and weaponVariantId, on the costume's hand attachment.
+        doc Only rigs named humanoid get a weapon: the compare at +0x5a. The loader's weapons_any_rig example makes it say yes.
+        seen mmoCharacter::EquipWeaponModel(bool)+0x5a
+    method SetWeaponIlvl(int)
+        param 1 ilvl
+        doc Changes the weapon's item level and picks a new weaponVariantId for it.

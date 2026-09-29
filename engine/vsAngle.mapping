@@ -1,0 +1,7 @@
+class vsAngle
+    doc From the engine's public source (VS/Math/VS_Angle.h): radians, with cached sine and cosine.
+    size 0x10
+    field 0x0 m_angle float
+    field 0x4 m_cosValue float
+    field 0x8 m_sinValue float
+    field 0xc m_trigCalculated bool

@@ -1,0 +1,4 @@
+class mmoReleaseDemand
+    field 0x28 changeKeys ?
+        doc The change keys that meet the demand, filled by _SetMatchingChangeKeys.
+        seen mmoReleaseDemand::_SetMatchingChangeKeys()+0x3c

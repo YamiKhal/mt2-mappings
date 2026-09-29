@@ -1,0 +1,12 @@
+class vsWeakPointer<T>
+    doc A pointer to a T that turns null when the T is deleted. Kept inside other objects, 0x18 bytes.
+    size 0x18
+    doc Seen through mmoNPCAdvertisement's npc (at +0x128), set up field by field by mmoToon::GetSelfAdvertisements.
+    field 0x0 vtable void*
+        seen mmoToon::GetSelfAdvertisements()+0x1d0
+    field 0x8 object T*
+        doc The T, while it exists: check proxy first.
+        seen mmoToon::GetSelfAdvertisements()+0x1ac
+    field 0x10 proxy void**
+        doc Shared with the T; its first word is 0 once the T is gone.
+        seen mmoToon::GetSelfAdvertisements()+0x1b7

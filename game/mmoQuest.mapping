@@ -1,0 +1,10 @@
+class mmoQuest
+    field 0x208 advertisement mmoQuestAdvertisement*
+        doc The quest's "Do quest" advertisement.
+        seen mmoQuest::SetAdvertisements() [clone .part.0]+0x1e
+    method GetQuestMinLevel() const
+        doc Asks the quest's target for its level through a virtual call, slot at +0x2c0 of the target's vtable.
+        seen mmoQuest::GetQuestMinLevel() const+0x29
+    method GetQuestMaxLevel() const
+        doc Asks the quest's target through slot +0x2c8 of its vtable.
+        seen mmoQuest::GetQuestMaxLevel() const+0x29
