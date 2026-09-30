@@ -1,0 +1,7 @@
+class vsArrayStore<T>
+    doc The engine's list of objects it owns, kept by pointer; vsObjectArray<T> is built on it.
+    field 0x8 items T**
+        doc The pointers, count of them in use. PopBack deletes the last one's object.
+        seen vsArrayStore<mmoPane>::PopBack()+0xc
+    field 0x10 count int
+        seen vsArrayStore<mmoPane>::PopBack()+0x8

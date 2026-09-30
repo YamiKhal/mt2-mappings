@@ -1,0 +1,11 @@
+class vsRenderBuffer
+    doc Data for the graphics card: the points of a model, or which points make each triangle.
+    field 0x8 capacity int
+        doc How many bytes it has room for; ResizeArray makes more room when asked for more.
+        seen vsRenderBuffer::ResizeArray(int)+0x13
+    field 0x10 activeSize int
+        doc How many bytes are in use (SetActiveSize). For triangle indices, which are 2 bytes each, the count is activeSize / 2.
+        seen vsRenderBuffer::SetActiveSize(int)+0x0
+    field 0x18 contentType int
+        doc What each point holds, set by the SetArray used: 1 for positions only (SetArray(P const*, int)). What SaveFragment and the renderers switch on.
+        seen vsRenderBuffer::SetArray(vsRenderBuffer::P const*, int)+0xb

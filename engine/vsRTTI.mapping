@@ -1,0 +1,11 @@
+class vsRTTI
+    doc What the engine knows about one class at run time: its parent and the properties it saves and loads.
+    field 0x58 parent vsRTTI*
+        doc The class it's built on, or none; CountProperties follows it up to the top.
+        seen vsRTTI::CountProperties()+0x7
+    field 0x60 propertyCount int
+        doc This class's properties and all its parents', worked out by CountProperties.
+        seen vsRTTI::CountProperties()+0xb
+    field 0x70 properties vsArray<vsPropertyBase*>*
+        doc This class's own properties, as RegisterProperty adds them (their count is at +0x10, like any vsArray).
+        seen vsRTTI::CountProperties()+0x0

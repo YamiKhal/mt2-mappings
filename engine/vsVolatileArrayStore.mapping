@@ -1,0 +1,6 @@
+class vsVolatileArrayStore<T>
+    doc The objects a vsVolatileObjectArray<T> owns, kept by pointer; the order can change when one is removed.
+    field 0x8 items T**
+        seen vsVolatileArrayStore<mmoBuilding>::GetItem(int)+0x35
+    field 0x10 count int
+        seen vsVolatileArrayStore<mmoBuilding>::GetItem(int)+0x10

@@ -1,0 +1,9 @@
+class vsLocString
+    doc Text shown to the player: the text itself, and the values put into it.
+    size 0x38
+    field 0x0 text std::string
+        doc The text as given (vsLocString(std::string const&) copies it here); IsEmpty() is whether it has no characters.
+        seen vsLocString::vsLocString(std::string const&)+0x17
+    field 0x20 args std::vector<vsLocArg>
+        doc The values put into the text. Empty when it's made from a plain string.
+        seen vsLocString::vsLocString(std::string const&)+0x43

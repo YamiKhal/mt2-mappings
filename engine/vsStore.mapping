@@ -1,0 +1,17 @@
+class vsStore
+    doc A block of bytes read and written in order: files, saves and display lists go through one.
+    field 0x8 buffer char*
+        doc The first byte.
+        seen vsStore::vsStore(char*, int)+0x19
+    field 0x10 length unsigned long long
+        doc How many bytes the buffer has room for.
+        seen vsStore::vsStore(char*, int)+0x12
+    field 0x18 bufferEnd char*
+        doc Just past the buffer's last byte: buffer + length.
+        seen vsStore::vsStore(char*, int)+0x1d
+    field 0x20 readHead char*
+        doc Where the next read starts; GetReadHeadPosition() is readHead - buffer, Rewind() puts it back at buffer.
+        seen vsStore::GetReadHeadPosition()+0x0
+    field 0x28 writeHead char*
+        doc Where the next write goes: what's written is buffer up to writeHead, and what's left to read is readHead up to writeHead.
+        seen vsStore::AdvanceWriteHead(unsigned long long)+0x0

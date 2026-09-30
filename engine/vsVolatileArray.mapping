@@ -1,0 +1,7 @@
+class vsVolatileArray<T>
+    doc A list like vsArray whose order can change when an item is removed.
+    field 0x8 items T*
+        seen vsVolatileArray<mmoRegion*>::GetItem(int)+0x35
+    field 0x10 count int
+        doc Clear() sets it to 0 and PopBack() takes one off; the items stay in the buffer.
+        seen vsVolatileArray<mmoToon*>::Clear()+0x0

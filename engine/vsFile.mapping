@@ -1,0 +1,29 @@
+class vsFile
+    doc A file opened for reading or writing, through PhysFS. The layout is the engine's public VS_File.h, after the
+    doc vtable; the exe's constructor sets each field in that order.
+    size 0x88
+    field 0x8 m_filename std::string
+        doc The name it was opened with.
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0x3c
+    field 0x28 m_tempFilename std::string
+        doc Where it's written first when writing; moved to m_filename when it's closed (see m_moveOnDestruction).
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0x8f
+    field 0x48 m_file PHYSFS_File*
+        doc PhysFS's handle, or null when it couldn't be opened.
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0x227
+    field 0x50 m_compressedStore vsStore*
+    field 0x58 m_store vsStore*
+    field 0x60 m_zipData zipdata*
+    field 0x68 m_ok bool
+        doc Whether it opened and every read and write so far worked. IsOK() returns it.
+        seen vsFile::IsOK() const+0x0
+    field 0x6c m_error vsFile::Error
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0xba
+    field 0x70 m_mode vsFile::Mode
+        doc Reading or writing, as given to the constructor.
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0xc1
+    field 0x78 m_length size_t
+        doc How many bytes the file has, when reading.
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0x147
+    field 0x80 m_moveOnDestruction bool
+        seen vsFile::vsFile(std::string const&, vsFile::Mode)+0xc4

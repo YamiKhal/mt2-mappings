@@ -1,0 +1,12 @@
+class std::vector<T>
+    doc GCC's std::vector (libstdc++): three pointers, 24 bytes.
+    size 0x18
+    field 0x0 begin T*
+        doc The first item.
+        seen vsLocString::vsLocString(std::string const&)+0x43
+    field 0x8 end T*
+        doc Just past the last item: end - begin is how many there are.
+        seen vsLocString::vsLocString(std::string const&)+0x43
+    field 0x10 capacityEnd T*
+        doc Just past the room it has: more items than fit make it move them to a bigger buffer.
+        seen vsLocString::vsLocString(std::string const&)+0x3b

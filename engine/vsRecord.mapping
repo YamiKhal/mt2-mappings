@@ -1,0 +1,29 @@
+class vsRecord
+    doc One line of a data file (label, then values, then an optional { block } of child lines), and its children.
+    doc The layout is the engine's public VS_Record.h; the exe's constructor and Init set the same places.
+    size 0x78
+    field 0x0 m_label vsToken
+        doc The word before the values: "Name" in Name "Bob".
+    field 0x30 m_token vsArray<vsToken>
+        doc The values after the label. GetToken(i) and GetTokenCount() read it.
+        seen vsRecord::vsRecord()+0x1b
+    field 0x48 m_childList vsArray<vsRecord*>
+        doc The lines inside its { block }.
+        seen vsRecord::vsRecord()+0x44
+    field 0x60 m_lastChild vsRecord*
+        doc The child added last, while parsing.
+        seen vsRecord::vsRecord()+0x64
+    field 0x68 m_inBlock bool
+        doc While parsing: inside this record's { block }.
+        seen vsRecord::ParseString(std::string)+0x4a
+    field 0x69 m_hasLabel bool
+        seen vsRecord::vsRecord()+0x60
+    field 0x6a m_lineIsOpen bool
+        doc While parsing: more values can still join this line (Init sets it).
+        seen vsRecord::Init()+0x233
+    field 0x6c m_streamModeChildCount int
+        doc In stream mode, how many children follow in the file; GetChildCount() returns it instead of m_childList's count.
+        seen mmoColorGradient::SetFromRecord(vsRecord*)+0x36
+    field 0x70 m_streamMode bool
+        doc Read from a binary stream one child at a time (LoadBinary_Stream), so m_childList stays empty.
+        seen vsRecord::vsRecord()+0x5c

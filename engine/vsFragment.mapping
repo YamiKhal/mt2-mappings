@@ -1,0 +1,8 @@
+class vsFragment
+    doc A piece of a model drawn in one go: its buffers and material.
+    field 0x40 vertexBuffer vsRenderBuffer*
+        doc SetSimple's first buffer: the points drawn.
+        seen vsFragment::SetSimple(vsRenderBuffer*, vsRenderBuffer*, vsFragment::SimpleType, vsFragment::SimpleBufferOwnershipType)+0x25
+    field 0x48 indexBuffer vsRenderBuffer*
+        doc SetSimple's second buffer: which points make each triangle, read as 16-bit numbers.
+        seen vsFragment::SetSimple(vsRenderBuffer*, vsRenderBuffer*, vsFragment::SimpleType, vsFragment::SimpleBufferOwnershipType)+0x29

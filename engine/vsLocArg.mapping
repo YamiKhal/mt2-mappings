@@ -1,0 +1,19 @@
+class vsLocArg
+    doc A named value put into a vsLocString: a text, a whole number or a number with decimals.
+    doc They sit 0x68 bytes apart in a vsLocString's args: SubVars steps through them by that much.
+    size 0x68
+    field 0x0 name std::string
+        doc The name the text refers to it by (each constructor's first parameter).
+        seen vsLocArg::vsLocArg(std::string const&, float, int)+0x1c
+    field 0x20 locString vsLocString
+        doc The value when it's a text (kind 0).
+        seen vsLocArg::vsLocArg(std::string const&, float, int)+0x2d
+    field 0x58 number int
+        doc A whole number's value (kind 1); for a number with decimals, how many to show (-1: the default).
+        seen vsLocArg::vsLocArg(std::string const&, int)+0x2e
+    field 0x5c amount float
+        doc The value when it's a number with decimals (kind 2).
+        seen vsLocArg::vsLocArg(std::string const&, float, int)+0x40
+    field 0x60 kind int
+        doc Which value it holds: 0 the text, 1 the whole number, 2 the number with decimals.
+        seen vsLocArg::vsLocArg(std::string const&, int)+0x31

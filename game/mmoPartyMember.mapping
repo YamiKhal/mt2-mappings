@@ -1,0 +1,3 @@
+class mmoPartyMember
+    field 0x18 toon mmoToon*
+        seen mmoParty::_RemoveNullMember()+0x46

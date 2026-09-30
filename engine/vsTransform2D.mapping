@@ -1,0 +1,14 @@
+class vsTransform2D
+    doc A 2D position, angle and scale, and the matrix made from them. The layout is the engine's public
+    doc VS_Transform.h; each setter marks it dirty so the matrix is made again when asked for.
+    size 0x64
+    field 0x0 m_dirty bool
+        doc The matrix is out of date.
+        seen vsTransform2D::SetScale(vsVector2D const&)+0x3
+    field 0x4 m_matrix vsMatrix4x4
+    field 0x44 m_position vsVector2D
+        seen vsTransform2D::SetTranslation(vsVector2D const&)+0x6
+    field 0x4c m_angle vsAngle
+        seen vsTransform2D::SetAngle(vsAngle const&)+0x3
+    field 0x5c m_scale vsVector2D
+        seen vsTransform2D::SetScale(vsVector2D const&)+0x6
