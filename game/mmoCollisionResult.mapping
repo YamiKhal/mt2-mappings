@@ -1,0 +1,17 @@
+class mmoCollisionResult
+    field 0x0 rayDirection vsVector3D
+        seen mmoCollisionSystem::CollideRay(mmoCollisionResult*, vsVector3D const&, vsVector3D const&, unsigned int, int)+0x50
+    field 0xc rayStart vsVector3D
+        seen mmoCollisionSystem::CollideRay(mmoCollisionResult*, vsVector3D const&, vsVector3D const&, unsigned int, int)+0x42
+    field 0x18 hitPosition vsVector3D
+        seen mmoCollisionResult::SetZeroPlane(vsVector3D const&, vsVector3D const&, float)+0x35
+    field 0x24 hitNormal vsVector3D
+        seen mmoCollisionResult::SetZeroPlane(vsVector3D const&, vsVector3D const&, float)+0x45
+    field 0x30 hitDistance float
+        seen mmoCollisionResult::SetZeroPlane(vsVector3D const&, vsVector3D const&, float)+0x4c
+    field 0x1e8 dungeonCell int
+        seen mmoCollisionResult::GetDungeonCell()+0x34
+    field 0x1ec type unsigned int
+        seen mmoCollisionResult::SetDungeonGrid(mmoDungeon*, int, vsVector3D const&, vsVector3D const&, float)+0x24
+    field 0x1f0 collisionMask unsigned int
+        seen mmoCollisionSystem::CollideRay(mmoCollisionResult*, vsVector3D const&, vsVector3D const&, unsigned int, int)+0x32

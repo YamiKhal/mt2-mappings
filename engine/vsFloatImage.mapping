@@ -1,0 +1,15 @@
+class vsFloatImage
+    doc An image of vsColor pixels, read back from textures (VS_FloatImage.h in the engine's public source).
+    size 0x20
+    field 0x0 m_pixel vsColor*
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x9
+    field 0x8 m_pixelCount int
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x25
+    field 0xc m_width unsigned int
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x17
+    field 0x10 m_height unsigned int
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x1a
+    field 0x14 m_pbo unsigned int
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x1e
+    field 0x18 m_sync void*
+        seen vsFloatImage::vsFloatImage(unsigned int, unsigned int)+0x2e

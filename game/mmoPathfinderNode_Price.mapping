@@ -1,0 +1,7 @@
+class mmoPathfinderNode::Price
+    doc What a path has spent so far, per currency. CanAffordBuildingService checks it against the pathfinder's limits.
+    size 0x8
+    field 0x0 gold int
+        seen mmoPathfinderStep::CanAffordBuildingService(mmoPathfinderNode*, mmoBuildingService*)+0x31
+    field 0x4 realMoney int
+        seen mmoPathfinderStep::CanAffordBuildingService(mmoPathfinderNode*, mmoBuildingService*)+0x60

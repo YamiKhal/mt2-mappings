@@ -1,0 +1,19 @@
+class mmoPathfinderNode
+    field 0x0 type int
+        seen mmoPathfinderNode::SetPosition(mmoRegion*, vsVector3D const&, NavMeshTriangle*, vsVector3D const&)+0x10
+    field 0x4 position vsVector3D
+        seen mmoPathfinderNode::SetPosition(mmoRegion*, vsVector3D const&, NavMeshTriangle*, vsVector3D const&)+0x16
+    field 0x30 triangle NavMeshTriangle*
+        seen mmoPathfinderNode::SetPosition(mmoRegion*, vsVector3D const&, NavMeshTriangle*, vsVector3D const&)+0x1e
+    field 0x38 parentNode mmoPathfinderNode*
+        seen mmoPathfinderNode::SetParentNode(mmoPathfinderNode*)+0x11
+    field 0x50 walkpoint int
+        seen mmoPathfinderNode::Find(mmoPath*, int)+0x22
+    field 0x60 gizmo mmoGizmo*
+        seen mmoPathfinderStep::AddOrUpdateFromNodeToDoorNode(mmoPathfinderNode*, mmoGizmo*, int, bool, bool)+0x1cf
+    field 0x68 costSoFar float
+        seen mmoPathfinderNode::GetCheapestNode()+0x6b
+    field 0x6c estimatedCostToGoal float
+        seen mmoPathfinderNode::GetCheapestNode()+0x70
+    field 0x70 price mmoPathfinderNode::Price
+        seen mmoPathfinderStep::CanAffordBuildingService(mmoPathfinderNode*, mmoBuildingService*)+0x31
