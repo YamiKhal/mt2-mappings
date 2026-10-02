@@ -1,0 +1,7 @@
+class vsPool<T>
+    doc Objects made once and lent out again (VS/Utils/VS_Pool.h): Borrow takes one from the unused list, or makes one.
+    field 0x18 m_totalCount int
+        doc How many it made. Closing, it checks every one came back: an object deleted elsewhere has to be taken off.
+        seen vsPool<mmoArrow>::~vsPool()+0x1b
+    field 0x1c m_unusedCount int
+        seen vsPool<mmoArrow>::Borrow()+0x8

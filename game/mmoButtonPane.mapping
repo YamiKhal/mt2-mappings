@@ -1,0 +1,4 @@
+class mmoButtonPane
+    field 0x490 tooltipPane mmoTooltip*
+        doc The tooltip shown while the cursor is over the button, made from its window file's tooltip; none without one.
+        seen mmoButtonPane::MouseOver(mmoCursor*, vsVector2D const&)+0x12

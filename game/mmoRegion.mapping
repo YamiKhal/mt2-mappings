@@ -1,0 +1,4 @@
+class mmoRegion
+    field 0x998 npcs mmoNPCManager*
+        doc The region's NPCs (mmoNPCManager::type lists them).
+        seen mmoToon::FindNearbyNewQuestGiver()+0xab

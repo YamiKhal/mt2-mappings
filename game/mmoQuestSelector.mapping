@@ -1,6 +1,6 @@
 class mmoQuestSelector
     doc One quest card in the quest list.
-    field 0x3d8 quest ?
+    field 0x3d8 quest vsWeakPointer<mmoQuest>
         doc The quest the card shows.
         unsure Its type: the code passes its address to a call, so it's kept inside, likely a weak pointer.
         seen mmoQuestSelector::RefreshQuest()+0x46

@@ -1,0 +1,4 @@
+class mmoPane
+    field 0x69 visible bool
+        doc Whether the pane is drawn: the engine's sprite visibility, in the vsSprite the pane is also built on.
+        seen mmoQuestSelector::SetSelected(bool)+0xa8

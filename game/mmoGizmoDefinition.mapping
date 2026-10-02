@@ -1,4 +1,4 @@
 class mmoGizmoDefinition
-    field 0xa8 variants ?
+    field 0xa8 variants vsArrayStore<mmoGizmoVariant>
         doc The gizmo type's variants, looked up by name in GetVariant.
         seen mmoGizmoDefinition::GetVariant(std::string const&) const+0x1a

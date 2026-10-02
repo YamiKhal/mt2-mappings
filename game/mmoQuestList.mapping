@@ -1,5 +1,5 @@
 class mmoQuestList
-    field 0x358 npc ?
+    field 0x358 npc vsWeakPointer<mmoNPC>
         doc The NPC whose quests the list shows.
         unsure Its type: the code takes its address, so it's kept inside, likely a weak pointer.
         seen mmoQuestList::UpdateUI(float)+0x250

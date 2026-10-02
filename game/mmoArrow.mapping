@@ -1,0 +1,9 @@
+class mmoArrow
+    doc The arrow drawn on the map from a quest's target to its quest giver.
+    field 0x13c from vsVector3D
+        seen mmoQuestDisplay::DisplayQuest(mmoQuest*)+0x302
+    field 0x148 to vsVector3D
+        seen mmoQuestDisplay::DisplayQuest(mmoQuest*)+0x321
+    field 0x1ac changed bool
+        doc Set after moving an end, so the arrow works out its path again.
+        seen mmoQuestDisplay::DisplayQuest(mmoQuest*)+0x30d

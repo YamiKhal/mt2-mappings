@@ -4,6 +4,7 @@ class vsTransform3D
     size 0x6c
     field 0x0 m_quaternion vsQuaternion
     field 0x10 m_translation vsVector3D
+        seen vsTransform3D::vsTransform3D(vsQuaternion const&, vsVector3D const&, vsVector3D const&)+0x7
     field 0x1c m_scale vsVector3D
     field 0x28 m_dirty bool
         doc The cached matrix needs rebuilding.
